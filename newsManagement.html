@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Management</title>
+	<style>
+		body {
+			margin:0;
+			min-width: 980px;
+		}
+		.header {
+			height: 60px;
+		}
+		.header input {
+			float: right;
+			height: 20px;
+			width: 200px;
+			margin-top: 17px;
+			outline: none;
+		}
+		.header p {
+			float: left;
+			font-size: 20px;
+			margin: 20px 0 0 0;
+			color: #2980b6;
+		}
+		img {
+			background-color: #8cc6ea;
+			float: right;
+			padding: 5px;
+			margin-top: 17px;
+		}
+		.header select {
+			float:right;
+			margin: 17px 0 0 0;
+			height: 27px;
+			width:100px;
+		}
+		.release {
+			background-color: #f1f4f9;
+			padding: 0 0 0 20px;
+			border-top: 1px solid #ddd;
+			border-bottom: 1px solid #ddd;
+		}
+		.release p {
+			color: #2980b6;
+		}
+		.title {
+			margin:15px 0 0 30px;	
+		}
+		.title p {
+			border:1px solid #ddd;
+			float: left;
+			width: 80px;
+			height: 32px;
+			text-align: center;
+			line-height: 30px;
+			border-right: none;
+		}
+		.title input {
+		    height: 30px;
+			margin-top: 16px;
+			width: 550px;
+			border:1px solid #ddd;
+			outline: none;
+		}
+		.title select {
+			width: 100px;
+			float: none;
+		}
+		.menu p {
+			border:1px solid #ddd;
+			float: left;
+			width: 80px;
+			height: 32px;
+			text-align: center;
+			line-height: 30px;
+			border-right: none;
+			margin-left: -80px;
+		}
+		.select {
+			width: 250px;
+			height: 32px;
+			border:1px solid #ddd;
+			float: left;
+			margin-top: 16px;
+		}
+		.select select {
+			width: 150px;
+			outline: none;
+		    border:none;
+		    height: 30px;
+		    margin:1px 0 0 3px;
+		}
+		.content {
+           margin: 70px 0 0 30px;
+		}
+		textarea {
+			width: 630px;
+			height: 300px;
+			border:1px solid #ddd;
+			background-color: #f9f9f9;
+			outline: none;
+		    max-height: 300px;
+		    max-width: 630px;
+		}
+		::-webkit-input-placeholder {
+			font-size: 15px;
+			padding:20px 0 0 20px;
+		}
+		.button {
+			width: 150px;
+			height: 30px;
+			margin:20px 0 0 30px;
+			text-align: center;
+			line-height: 30px;
+			background-color:#2980b6; 
+			border-radius: 5px;
+			color:white;
+		}
+		.button p {
+			word-spacing: 20px;
+		}
+		.hr {
+			border-bottom:1px solid #ddd;
+			padding-bottom: 25px;
+		}
+	</style>
+</head>
+<body>
+  <div class="hr">
+	<div class="header">
+		<p>新闻管理</p>
+		<img src="/Users/ghren/desktop/search.png">
+		<input type="text" placeholder="用户名">
+		<select>
+			<option>教务处</option>
+			<option>教务处</option>
+			<option>教务处</option>
+			<option>教务处</option>
+			<option>教务处</option>
+		</select>
+	</div>
+	<div class="release">
+		<p>发布新闻</p>
+	</div>
+	<div class="title">
+		<p>标题</p>
+		<input type="text" placeholder="填写标题">
+	</div>
+	<div class="menu">
+		<p>栏目</p>
+		<div class="select">
+			<select>
+				<option>教务处</option>
+				<option>教务处</option>
+				<option>教务处</option>
+				<option>教务处</option>
+				<option>教务处</option>
+				<option>教务处</option>
+				<option>教务处</option>
+			</select>
+		</div>
+	</div>
+	<div class="content">
+		<textarea placeholder="编辑正文" rows="50" cols="60"></textarea>
+	</div>
+	<div class="button"><p>发 布</p></div>
+	</div>
+</body>
+</html>

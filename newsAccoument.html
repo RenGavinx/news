@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Accoument</title>
+	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script>
+		$(function() {
+          $(".footer1").click(function(){
+          	$(".footer1").css({"background-color":"#2980b6","color":"white"});
+            $(".footer2").css({"background-color":"white","color":"black"});
+            $(".footer3").css({"background-color":"white","color":"black"});
+            $(".footer4").css({"background-color":"white","color":"black"});
+            $(".footer6").css({"background-color":"white","color":"black"});
+		});
+          $(".footer2").click(function(){
+            $(".footer1").css({"background-color":"white","color":"black"});
+            $(".footer2").css({"background-color":"#2980b6","color":"white"});
+            $(".footer3").css({"background-color":"white","color":"black"});
+            $(".footer4").css({"background-color":"white","color":"black"});
+            $(".footer6").css({"background-color":"white","color":"black"});
+		});
+          $(".footer3").click(function(){
+            $(".footer1").css({"background-color":"white","color":"black"});
+            $(".footer2").css({"background-color":"white","color":"black"});
+            $(".footer3").css({"background-color":"#2980b6","color":"white"});
+            $(".footer4").css({"background-color":"white","color":"black"});
+            $(".footer6").css({"background-color":"white","color":"black"});
+		});
+          $(".footer4").click(function(){
+            $(".footer1").css({"background-color":"white","color":"black"});
+            $(".footer2").css({"background-color":"white","color":"black"});
+            $(".footer3").css({"background-color":"white","color":"black"});
+            $(".footer4").css({"background-color":"#2980b6","color":"white"});
+            $(".footer6").css({"background-color":"white","color":"black"});
+		});
+          $(".footer6").click(function(){
+            $(".footer1").css({"background-color":"white","color":"black"});
+            $(".footer2").css({"background-color":"white","color":"black"});
+            $(".footer3").css({"background-color":"white","color":"black"});
+            $(".footer4").css({"background-color":"white","color":"black"});
+            $(".footer6").css({"background-color":"#2980b6","color":"white"});
+		});
+          $(".add").click(function(){
+            $(".noSelected").fadeIn(100);
+            $(".addAccount").fadeIn(100);
+        });
+          $(".addHeader img,.addDetermine").click(function(){
+          	$(".noSelected").fadeOut(100);
+          	$(".addAccount").fadeOut(100);
+          });
+          $(".edit").click(function(){
+            $(".noSelected").fadeIn(100);
+            $(".editAccount").fadeIn(100);
+          });
+          $(".editHeader img,.editDetermine").click(function(){
+          	$(".noSelected").fadeOut(100);
+          	$(".editAccount").fadeOut(100);
+          });
+          $(".delete").click(function(){
+            $(".noSelected").fadeIn(100);
+            $(".deleteAccount").fadeIn(100);
+          });
+          $(".deleteHeader img,.deleteDetermine").click(function(){
+          	$(".noSelected").fadeOut(100);
+          	$(".deleteAccount").fadeOut(100);
+          });
+          $(".authorize").click(function(){
+            $(".noSelected").fadeIn(100);
+            $(".authorizeAccount").fadeIn(100);
+          });
+          $(".authorizeHeader img,.authorizeDetermine").click(function(){
+          	$(".noSelected").fadeOut(100);
+          	$(".authorizeAccount").fadeOut(100);
+          });
+      });
+	</script>
+	<style type="text/css">
+		body {
+			margin:0;
+			min-width: 980px;
+		}
+		.header {
+			height: 60px;
+			border-bottom: 1px solid #dddddd;
+		}
+		.header input {
+			float: right;
+			height: 20px;
+			width: 200px;
+			margin-top: 17px;
+			outline: none;
+		}
+		.header p {
+			float: left;
+			font-size: 20px;
+			margin: 20px 0 0 0;
+			color: #2980b6;
+		}
+		img {
+			background-color: #8cc6ea;
+			float: right;
+			padding: 5px;
+			margin-top: 17px;
+		}
+		.operate {
+			height: 60px;
+			border-bottom: 1px solid #dddddd;
+		}
+		.operate p {
+			margin:10px;
+			padding: 10px 20px 10px 20px;
+			font-size: 13px;
+			background-color: #2980b6;
+			border:1px solid #2980b6;
+			border-radius: 5px;
+			color: white;
+			float: left;
+			transition: 0.2s;
+		}
+		p.delete{
+			border:1px solid orange;
+		}
+		p.authorize {
+			border:1px solid orange;
+		}
+		.add:hover{
+			background-color: white;
+			color: #2980b6; 
+			cursor: pointer;
+		}
+		.edit:hover{
+			background-color: white;
+			color: #2980b6;
+			cursor: pointer;
+		}
+		.delete:hover{
+			background-color: white;
+			color: orange;
+			cursor: pointer;
+		}
+		.authorize:hover {
+			background-color: white;
+			color: orange;
+			cursor: pointer;
+		}
+		p.delete {
+			background-color:orange;
+		}
+		p.authorize {
+			margin:10px;
+			float: right;
+			padding: 10px 20px 10px 20px;
+			background-color:orange;
+		}
+		.content {
+			height: 600px;
+			margin-top: 20px;
+			padding: 0;
+		}
+		li {
+			display: inline-block;
+			margin:0;
+			color: #2980b6;
+			width: 25%;
+		}
+		ul {
+			height: 30px;
+		    padding:15px 0 0 10px;
+		    border-bottom: 1px solid #dddddd;
+		    margin:0;
+		}
+		ul.special {
+			height: 30px;
+		    padding:15px 0 0 10px;
+		    border-bottom: 1px solid #dddddd;
+		    border-top: 1px solid #dddddd;
+		    margin:0;
+		    background-color: #f1f4f9;
+		}
+		ul input {
+			float: left;
+			padding: 0;
+			margin: 1.5px 5px 0 0;
+			outline: none;
+		}
+		ul p {
+			text-align: center;
+			color: red;
+			padding: 0;
+			margin: 0;
+		}
+		p.footer {
+			display: inline-block;
+			margin-top: 5px;
+			color: black;
+		}
+		p.footer:hover { 
+			color:#2980b6;
+			text-decoration:underline;
+			cursor: pointer;
+		}
+		li.footer {
+			margin: 5px 0 0 5px;
+			text-align: center;
+		    line-height: 30px;
+			width: 30px;
+			height: 30px;
+			cursor: pointer;
+			border:1px solid #dddddd;
+			color: black;
+		}
+		li.footer1 {
+			background-color:  #2980b6;
+			color: white;
+		}
+		li.footer5 {
+			border:none;
+		}
+		ul.footer {
+			padding: 20px 0 20px 10px;
+		}
+		.noSelected{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,0);
+			position: fixed;
+			top: 0;
+			left: 0;
+			min-width: 980px;
+           display: none;
+		}
+	    .addAccount,.editAccount,.deleteAccount,.authorizeAccount {
+			position: absolute;
+			left: 30%;
+			top: 300px;
+			box-shadow: 10px 10px 10px #bbb;
+		    display: none;
+		}
+		.addHeader,.editHeader,.deleteHeader {
+			width: 360px;
+			background-color: #eee;
+			height: 25px;
+			padding:10px 0 0 5px;
+		} 
+		.authorizeHeader{
+			width: 560px;
+			background-color: #eee;
+			height: 25px;
+			padding:10px 0 0 5px;
+		}
+		.addHeader p,.editHeader p,.deleteHeader p,.authorizeHeader p {
+			margin: 0;
+			float: left;
+			color:#2980b6;
+		}
+		.addHeader img,.editHeader img,.deleteHeader img,.authorizeHeader img {
+			margin: -2px 5px 0 0;
+			float: right;
+			background-color: transparent;
+			transition: 0.5s;
+			cursor: pointer;
+		}
+		.addHeader img:hover,.editHeader img:hover,.deleteHeader img:hover,.authorizeHeader img:hover{
+			 transform: rotate(180deg); 
+		}
+		.addContent {
+			width: 365px;
+			height: 250px;
+			background-color: white;
+		}
+		.editContent {
+			width: 365px;
+			height: 280px;
+			background-color: white;
+		}
+		.deleteContent {
+			width: 365px;
+			height: 100px;
+			background-color: white;
+		}
+		.authorizeContent {
+			width: 565px;
+			height: 280px;
+			background-color: white;
+			padding-top: 50px;
+		}
+		.addContent p,.editContent p,.deleteContent p {
+			display: inline-block;
+			margin:30px 0 10px 40px;
+			padding:8px 8px 12px 8px;
+			border:1px solid #ddd;
+            border-right: none;
+		}
+		.authorizeContent p{
+			margin:20px 0 10px 140px;
+			padding:8px 8px 12px 8px;
+		}
+        p.editSpecial {
+        	border:none;
+        	margin:15px 50px 0 40px;
+        	padding: 0;
+        	font-size: 15px;
+        	display:block;
+        }
+        span {
+        	color:#2980b6;
+        }
+        p.deleteSpecial {
+        	border:none;
+        	margin:15px 50px 0 40px;
+        	padding: 0;
+        	font-size: 15px;
+        	display:block;
+        	color: red;
+        }
+		.addContent input,.editContent input {
+			width: 200px;
+			height: 34px;
+			border:1px solid #ddd;
+			outline: none;
+		}
+		.addContent ::-webkit-input-placeholder {
+			font-size: 13px;
+			padding-left: 5px;
+		}
+		.authorizeContent ul {
+			height:30px;
+			padding:0;
+			margin:10px 0 0 60px;
+			border:none;
+		}
+		.authorizeContent li {
+            display: inline-block;
+            width:110px;
+		}
+		.addDetermine,.editDetermine,.deleteDetermine,.authorizeDetermine {
+			width: 250px;
+			height:20px;
+			text-align: center;
+			line-height: 20px;
+			background-color: #2980b6;
+			border-radius: 5px;
+			color:white;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div class="header">
+		<p>账户管理</p>
+		<img src="/Users/ghren/desktop/search.png">
+		<input type="text" placeholder="用户名">
+	</div>
+	<div class="operate">
+		<p class="add">添加</p>
+		<p class="edit">编辑</p>
+		<p class="delete">删除</p>
+		<p class="authorize">账号授权</p>
+	</div>
+	<div class="content">
+		<ul class="special">
+		    <input type="checkbox" id="one" class="one">
+			<li><label for="one">用户名</label></li>
+			<li class="li1">密码</li>
+			<li class="li2">授权形式</li>
+		</ul>
+		<ul><p>未添加管理员账户!</p></ul>
+		<ul>
+		    <input type="checkbox" id="two" class="one">
+			<li><label for="two">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="three" class="one">
+			<li><label for="three">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="four" class="one">
+			<li><label for="four">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="five" class="one">
+			<li><label for="five">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="six" class="one">
+			<li><label for="six">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="seven" class="one">
+			<li><label for="seven">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="eight" class="one">
+			<li><label for="eight">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="nine" class="one">
+			<li><label for="nine">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul>
+		    <input type="checkbox" id="ten" class="one">
+			<li><label for="ten">jiaowuchu</label></li>
+			<li>acc123456</li>
+			<li>教务处、新闻中心、财务处</li>
+		</ul>
+		<ul class="footer">
+		    <p class="footer">上一页</p>
+			<li class="footer footer1">1</li>
+			<li class="footer footer2">2</li>
+			<li class="footer footer3">3</li>
+            <li class="footer footer4">4</li>
+            <li class="footer footer5">...</li>
+            <li class="footer footer6">12</li>
+            <p class="footer">下一页</p>
+		</ul>
+	</div>
+	<div class="noSelected">
+	  <div class="addAccount">
+		<div class="addHeader">
+			<p>添加账户</p>
+			<img src="/Users/ghren/desktop/close副本.png" alt="">
+		</div>
+		<div class="addContent">
+			<p>用户名</p><input type="text" placeholder="输入用户名"></br>
+			<p>密 &nbsp;&nbsp;&nbsp;码</p><input type="text" placeholder="输入密码"></br>
+			<p class="addDetermine">确&nbsp;&nbsp;&nbsp;定</p>
+		</div>
+	  </div>
+	  <div class="editAccount">
+		 <div class="editHeader">
+			<p>编辑账户</p>
+			<img src="/Users/ghren/desktop/close副本.png" alt="">
+		 </div>
+		 <div class="editContent">
+		    <p class="editSpecial">正在编辑“<span>jiaowuchu</span>”账户</p>
+			<p>用户名</p><input type="text" placeholder="输入用户名"></br>
+			<p>密 &nbsp;&nbsp;&nbsp;码</p><input type="text" placeholder="输入密码"></br>
+			<p class="editDetermine">确&nbsp;&nbsp;&nbsp;定</p>
+		 </div>
+	  </div>
+	  <div class="deleteAccount">
+	    <div class="deleteHeader">
+	    	<p>删除帐户</p>
+			<img src="/Users/ghren/desktop/close副本.png" alt="">
+	    </div>
+	    <div class="deleteContent">
+	        <p class="deleteSpecial">确定删除“jiaowuchu”账户吗？</p>
+	    	<p class="deleteDetermine">确&nbsp;&nbsp;&nbsp;定</p>
+	    </div>
+	    </div>
+	    <div class="authorizeAccount">
+	    	<div class="authorizeHeader">
+	    	<p>账户栏目授权</p>
+			<img src="/Users/ghren/desktop/close副本.png" alt="">
+			</div>
+			<div class="authorizeContent">
+				<ul>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+				</ul>
+				<ul>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+				</ul>
+				<ul>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+				</ul>
+				<ul>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+					<li><label><input type="checkbox">教务处</label></li>
+				</ul>
+				<p class="authorizeDetermine">保&nbsp;&nbsp;&nbsp;存</p>
+			</div>
+	    </div>
+	</div>
+</body>
+</html>
