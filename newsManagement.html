@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<title>Management</title>
 	<style>
 		body {
@@ -13,10 +14,11 @@
 		}
 		.header input {
 			float: right;
-			height: 20.5px;
+			height: 22px;
 			width: 200px;
 			margin-top: 17px;
 			outline: none;
+			border:1px solid #ddd;
 		}
 		.header p {
 			float: left;
@@ -27,7 +29,7 @@
 		img {
 			background-color: #8cc6ea;
 			float: right;
-			padding: 5.5px;
+			padding: 5px;
 			margin-top: 17px;
 			cursor: pointer;
 		}
@@ -37,6 +39,8 @@
 			height: 27px;
 			width:100px;
 			outline: none;
+			border:1px solid #ddd;
+			color: #666;
 		}
 		.release {
 			background-color: #f1f4f9;
@@ -56,7 +60,7 @@
 			width: 80px;
 			height: 32px;
 			text-align: center;
-			line-height: 30px;
+			line-height: 32px;
 			border-right: none;
 		}
 		.title input {
@@ -106,7 +110,7 @@
 		    max-height: 300px;
 		    max-width: 630px;
 		}
-		::-webkit-input-placeholder {
+		textarea::-webkit-input-placeholder {
 			font-size: 15px;
 			padding:20px 0 0 20px;
 		}
@@ -129,6 +133,12 @@
 			border-left:1px solid #ddd;
 			border-right:1px solid #ddd;
 		}
+		@-moz-document url-prefix() {
+           .title input {position: relative;top: -1px}
+           .menu div {
+           	position: relative;top: -1px
+           }
+        }
 	</style>
 </head>
 <body>

@@ -2,25 +2,14 @@
 <html>
 <head>
 	<meta charset = "UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 	<title>完美校园新闻</title>
 	<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
 	<script>
 		$(function(){
-		   $(".li1").click(function(){
-            $(".div6").css({"margin-left":"0px","width":"70px"});
-             });
-           $(".li2").click(function(){
-            $(".div6").css({"margin-left":"75px","width":"70px"});
-            });
-           $(".li3").click(function(){
-            $(".div6").css({"margin-left":"150px","width":"70px"});
-           });
-           $(".li4").click(function(){
-            $(".div6").css({"margin-left":"230px","width":"80px"});
-           });
-           $(".li5").click(function(){
-            $(".div6").css({"margin-left":"325px","width":"130px"});
+		   $("ul li").click(function(){
+             $(this).addClass("li1").siblings().removeClass("li1");
            });
 		});
 	</script>
@@ -64,13 +53,13 @@
         }
         .div5{
         	border-bottom: 1px solid orange;
-        	overflow: hidden;
+            height: 55px;
         }
         ul {
-        	height: 100%;
-        	width: 467px;
-        	margin: 5px;
-        	padding:0px;
+        	height: 55px;
+        	width: 567px;
+        	margin: 0;
+        	padding:0;
         }
         ul:hover {
         	cursor: pointer;
@@ -79,19 +68,20 @@
         	display: inline-block;
         	color: #696969;
         	font-size: 18px;
-        	padding:15px 18px 15px 0px;
+        	height: 53px;
+            text-align: center;
+            line-height: 55px;
+            margin-left:10px;
+            padding:0 5px 0 5px;
+        }
+        .li1 {
+            border-bottom: 2px solid orange;
         }
         img {
         	width: 35%;
         	float: left;
         	margin-top: 0.2%;
         	margin-bottom: 10px;
-        }
-        .div6 {
-        	position: absolute;
-        	width: 70px;
-            border-bottom:4px solid orange;
-            top: 110px;
         }
         .div7 p {
         	font-size: 15px;
@@ -149,12 +139,11 @@
 		<div class="div5">
 			<ul>
 				<li class="li1">教务处</li>
-				<li class="li2">教务处</li>
-				<li class="li3">教务处</li>
-				<li class="li4">图书馆里</li>
-				<li class="li5">图书馆里我我我</li>
-			</ul>
-			<div class="div6"></div>		
+				<li>教务处</li>
+				<li>教务处</li>
+				<li>图书馆里</li>
+				<li>图书馆里我我我</li>
+			</ul>	
 		</div>
 		<div class="div7">
 		    <img src="/Users/ghren/desktop/14副本.jpg" alt="">
